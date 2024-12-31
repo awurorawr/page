@@ -16,7 +16,7 @@ import { Icon } from "astro-icon/components";
       <HeaderLink href="/about">About</HeaderLink>
     </div>
     <div class="social-links">
-      <a href="./rss.xml">
+      <a aria-label="RSS Feed" href="/rss.xml">
         <Icon name="mdi:rss" />
       </a>
     </div>
@@ -29,6 +29,7 @@ import { Icon } from "astro-icon/components";
     background: var(--bg2);
     color: var(--fg);
     box-shadow: 0 2px 8px rgba(var(--black), 5%);
+    border-bottom: 1px solid var(--border);
   }
   h2 {
     margin: 0;
@@ -52,7 +53,7 @@ import { Icon } from "astro-icon/components";
   }
   nav a.active {
     text-decoration: none;
-    border-bottom-color: var(--accent);
+    border-bottom-color: var(--fg);
     color: var(--fg);
   }
 </style>

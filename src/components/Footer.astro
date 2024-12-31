@@ -1,13 +1,19 @@
 ---
-const today = new Date();
+const year = new Date()!.getFullYear();
 ---
 
+<script is:inline>
+  document.getElementById("footer-year").innerText = new Date().getFullYear();
+</script>
+
 <footer>
-  <p>&copy; {today.getFullYear()} awurorawr. All rights reserved.</p>
+  <p>
+    &copy; <span id="footer-year">{year}</span> awurorawr. All rights reserved.
+  </p>
 </footer>
 <style>
   footer {
-    color: var(--fg);
+    color: var(--fg3);
     text-align: center;
   }
 </style>
