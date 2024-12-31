@@ -8,7 +8,8 @@ import { Icon } from "astro-icon/components";
   <nav>
     <h2>
       <a href="/" class="title"
-        ><Icon name="material-symbols:planet" /> {SITE_TITLE}</a>
+        ><Icon name="material-symbols:planet" /> {SITE_TITLE}</a
+      >
     </h2>
     <div class="internal-links">
       <HeaderLink href="/">Home</HeaderLink>
@@ -40,6 +41,13 @@ import { Icon } from "astro-icon/components";
   h2 a.active {
     text-decoration: none;
   }
+
+  @media (max-width: 1024px) {
+    nav .title {
+      display: none;
+    }
+  }
+
   nav {
     display: flex;
     align-items: center;
